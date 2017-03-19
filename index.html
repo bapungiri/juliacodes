@@ -30,6 +30,24 @@
 <p> This documentation is for people who want to migrate from matlab environment to Julia. I will try to cover the most basic operations for now. But this website will be updated as we go along.</p>
 
 <h3>
+<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Creating an array.</h3>
+  
+<p> Matlab has an inbuilt functionallity for structures which offer a great way to store data and can be called easily. Let's just create a simple array with multiple field names.</p>
+          
+  <p>This is the matlab <code>Code</code> :</p>
+<pre><code class="Matlab">
+>> Mat_vector =  1:1:20
+</code></pre> 
+          
+<p> Julia produces the range of numbers much like python, but using the collect function one can generate vectorized forms of an array.</p>          
+          
+<p>This is <code>Julia Code</code> :</p>
+<pre><code class="Matlab">
+$ Julia_vect =  collect(1:1:20)
+</pre> 
+
+
+<h3>
 <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Reading Matlab Structures in Julia.</h3>
   
 <p> Matlab has an inbuilt functionallity for structures which offer a great way to store data and can be called easily. Let's just create a simple array with multiple field names.</p>
@@ -43,6 +61,7 @@
           
 <p>This is <code>Julia Code</code> :</p>
 <pre><code class="Matlab">
+$
 $ vars = matread("../path/to-your-file.mat")
 $ JuliaVal = vars["field1"]["field2"]["Values"]
 </pre>  
